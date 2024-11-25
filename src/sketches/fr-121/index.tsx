@@ -156,11 +156,11 @@ export const ArtworkFr121 = () => {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative flex align-middle justify-center">
         <img
           src={fr116}
           alt="fr-116"
-          className="w-[800px] h-[800px] top-0 left-0 absolute z-0"
+          className="w-[800px] h-[800px] top-0 left-50% absolute z-0 transform -translateX-50%"
           style={{ opacity: opacity }}
         />
         <ReactP5Wrapper
@@ -169,7 +169,7 @@ export const ArtworkFr121 = () => {
           goldenLineConfig={goldenLineConfig}
         />
       </div>
-      <div className="pt-5 fixed top-0 right-5 max-w-[300px] h-dvh overflow-scroll">
+      <div className="p-5">
         <h1>Configuration</h1>
         <p>Compare with the original (opacity):</p>
         <RangeInput
