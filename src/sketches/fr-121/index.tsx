@@ -169,7 +169,7 @@ export const ArtworkFr121 = () => {
           goldenLineConfig={goldenLineConfig}
         />
       </div>
-      <div className="pt-5 fixed top-0 right-5 max-w-[300px]">
+      <div className="pt-5 fixed top-0 right-5 max-w-[300px] h-dvh overflow-scroll">
         <h1>Configuration</h1>
         <p>Compare with the original (opacity):</p>
         <RangeInput
