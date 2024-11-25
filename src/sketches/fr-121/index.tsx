@@ -4,6 +4,7 @@ import {P5CanvasInstance, ReactP5Wrapper, SketchProps} from "@p5-wrapper/react";
 import {linearGradientBackground} from "../common/2d/background/tsx.ts";
 import fr116 from '../../assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg';
 import {useState} from "react";
+import {CheckboxInput, RangeInput} from "../../components/inputs.tsx";
 
 type FR116SketchProps = SketchProps & {
   debug: boolean;
@@ -48,10 +49,9 @@ function goldenLines(p5: P5CanvasInstance<FR116SketchProps>, input: IGoldenLineI
   const adjustFactor = input.adjustFactor || 1;
   const adjustFactorNodeSource = input.adjustFactorNodeSource || 1;
   const nodeVerticalOffsetFactor = input.nodeVerticalOffsetFactor || 1;
-  const startColor = p5.color('rgba(104, 94, 94, 0.01)');
   const endColor = p5.color('rgba(104, 94, 94, 0.8)');
+  const startColor = p5.color(24, 26, 64, 0.8);
   const lineColorFactor = input.lineColorFactor || 1;
-
   p5.push();
 
   p5.translate(-halfNodeWidth,0);
@@ -244,7 +244,7 @@ export const ArtworkFr121 = () => {
             <RangeInput
               min={-100}
               max={100}
-              step={0.1}
+              step={0.01}
               initialValue={goldenLineConfig.nodeVerticalOffset}
               onChange={(value) =>
                 handleConfigChange("nodeVerticalOffset", value)
@@ -259,7 +259,7 @@ export const ArtworkFr121 = () => {
             <RangeInput
               min={-5}
               max={3}
-              step={0.3}
+              step={0.1}
               initialValue={goldenLineConfig.nodeVerticalOffsetFactor}
               onChange={(value) =>
                 handleConfigChange("nodeVerticalOffsetFactor", value)
@@ -284,64 +284,5 @@ export const ArtworkFr121 = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-interface RangeInputProps {
-  min: number;
-  max: number;
-  step?: number;
-  initialValue?: number;
-  onChange?: (value: number) => void;
-}
-
-const RangeInput: React.FC<RangeInputProps> = ({ min, max, step = 1, initialValue = min, onChange }) => {
-  const [value, setValue] = useState(initialValue);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = Number(event.target.value);
-    setValue(newValue);
-    if (onChange) {
-      onChange(newValue);
-    }
-  };
-
-  return (
-    <div className="flex flex-col items-center">
-      <input
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={handleChange}
-        className="w-full"
-      />
-      <span className="mt-2 text-sm">{value}</span>
-    </div>
-  );
-};
-
-interface CheckboxInputProps {
-  label: string;
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-}
-
-const CheckboxInput: React.FC<CheckboxInputProps> = ({ label, checked, onChange }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.checked);
-  };
-
-  return (
-    <label className="flex items-center space-x-3">
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={handleChange}
-        className="form-checkbox h-5 w-5 text-blue-600"
-      />
-      <span className="text-gray-700">{label}</span>
-    </label>
   );
 };
