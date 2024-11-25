@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .range-input::-webkit-slider-runnable-track {
+    @apply bg-gray-600 h-2 rounded-lg; /* Track style */
+  }
+  .range-input::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-orange-500 rounded-full shadow-lg cursor-pointer; /* Thumb style */
+    margin-top: -6px; /* Align thumb with track */
+  }
+  .range-input::-moz-range-track {
+    @apply bg-gray-600 h-2 rounded-lg; /* Track style for Firefox */
+  }
+  .range-input::-moz-range-thumb {
+    @apply w-4 h-4 bg-orange-500 rounded-full shadow-lg cursor-pointer; /* Thumb style for Firefox */
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

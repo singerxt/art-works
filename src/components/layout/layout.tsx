@@ -14,7 +14,7 @@ export const Layout = () => {
             <a href="https://www.linkedin.com/in/mateusz-spiewak/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
-            <a href="https://github.com/singerxt" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/singerxt/art-works" target="_blank" rel="noopener noreferrer">
               <FaGithub/>
             </a>
           </div>

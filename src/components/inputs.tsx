@@ -28,7 +28,7 @@ export const RangeInput: React.FC<RangeInputProps> = ({ min, max, step = 1, init
         step={step}
         value={value}
         onChange={handleChange}
-        className="w-full"
+        className="w-full range-input"
       />
       <span className="mt-2 text-sm">{value}</span>
     </div>
