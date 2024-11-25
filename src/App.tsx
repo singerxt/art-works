@@ -5,7 +5,6 @@ function App() {
   return (
     <>
       <ArtworkFr121>
-
       </ArtworkFr121>
     </>
   )
