@@ -3,7 +3,7 @@
 import {P5CanvasInstance, ReactP5Wrapper, SketchProps} from "@p5-wrapper/react";
 import {linearGradientBackground} from "../common/2d/background/tsx.ts";
 import fr116 from '../../assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg';
-import React, {useState} from "react";
+import {useState} from "react";
 import {CheckboxInput, RangeInput} from "../../components/inputs.tsx";
 
 type FR116SketchProps = SketchProps & {
