@@ -162,10 +162,7 @@ function sketch(p5: P5CanvasInstance<FR116SketchProps>) {
     goldenLines(p5, { ...goldenLineConfig, debug });
   };
 }
-
 export const ArtworkFr121 = () => {
-  const previewWith = window.innerWidth > 800 ? 800 : window.innerWidth;
-
   const [opacity, setOpacity] = useState(0);
   const [debug, setDebug] = useState(false);
   const [goldenLineConfig, setGoldenLineConfig] = useState({
