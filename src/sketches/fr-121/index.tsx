@@ -5,6 +5,7 @@ import {linearGradientBackground} from "../common/2d/background/tsx.ts";
 import fr116 from '../../assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg';
 import {useState} from "react";
 import {CheckboxInput, RangeInput} from "../../components/inputs.tsx";
+import * as Article from './fr-121.md';
 
 type FR116SketchProps = SketchProps & {
   debug: boolean;
@@ -43,28 +44,9 @@ function drawDebugLines(p5: P5CanvasInstance<FR116SketchProps>, leftMax: number,
 
 const Desc = () => {
   return (
-    <article className="font-inter prose lg:prose-xl mx-auto px-5 pb-5 shadow-md rounded-lg">
-      <h1 className="text-3xl font-bold mb-4">
-        Reproducing "FR-121" by Michał Misiak: A Journey into Geometric Abstraction
-      </h1>
-      <p className="text-lg mb-4">
-        Michał Misiak, born in 1973 in Tarnów, Poland, is a contemporary artist renowned for his work in geometric abstraction. A graduate of the Academy of Fine Arts in Kraków, Misiak’s paintings serve as impulses that invite viewers into the realm of inner feelings and emotions.
-      </p>
-      <p className="text-lg mb-4">
-        In my recent project, I undertook the reproduction of Misiak’s "FR-121," aiming to delve into the intricacies of geometric abstraction and understand the meticulous balance between form and color that defines his work. This endeavor was not merely about replicating an image but about immersing myself in the creative process that Misiak employs, thereby gaining a deeper appreciation for the discipline and precision inherent in geometric art.
-      </p>
-      <p className="text-lg mb-4">
-        Through this reproduction, I sought to explore the meditative aspects of art-making, experiencing firsthand how
-        structured forms can evoke profound emotional responses. This journey has enriched my understanding of abstract
-        art and its capacity to communicate complex concepts through simplicity and order.
-      </p>
-      <p className="text-lg">
-        To recreate Michał Misiak’s “FR-121,” I employed p5.js, a JavaScript library designed for creative coding. This
-        tool enabled me to render intricate geometric patterns and gradients, closely mirroring the original artwork’s
-        aesthetic. By leveraging p5.js’s capabilities, I achieved a dynamic and interactive digital reproduction that
-        faithfully represents the essence of Misiak’s piece.
-      </p>
-    </article>
+    <div className="font-inter px-5 markdown-body pb-10">
+      <Article.ReactComponent />
+    </div>
   );
 };
 

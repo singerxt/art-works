@@ -2,3 +2,7 @@
 #root {
   width: 100%;
 }
+
+.markdown-body {
+  background: black!important;
+}
