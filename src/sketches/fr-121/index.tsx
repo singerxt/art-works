@@ -1,10 +1,10 @@
 /// Reproduction of FR-121 by Michał Misiak
 
 import {P5CanvasInstance, ReactP5Wrapper, SketchProps} from "@p5-wrapper/react";
-import {linearGradientBackground} from "../common/2d/background/tsx.ts";
-import fr116 from '../../assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg';
+import {linearGradientBackground} from '@/sketches/common/2d/background';
+import fr116 from '@/assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg';
 import {useState} from "react";
-import {CheckboxInput, RangeInput} from "../../components/inputs.tsx";
+import {CheckboxInput, RangeInput} from "@/components/inputs.tsx";
 import * as Article from './fr-121.md';
 
 type FR116SketchProps = SketchProps & {

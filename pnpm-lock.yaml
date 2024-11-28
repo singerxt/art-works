@@ -4,6 +4,7 @@ specifiers:
   '@babel/preset-react': ^7.25.9
   '@eslint/js': ^9.13.0
   '@p5-wrapper/react': ^4.4.2
+  '@types/node': ^22.10.1
   '@types/p5': ^1.7.6
   '@types/react': ^18.3.12
   '@types/react-dom': ^18.3.1
@@ -35,6 +36,7 @@ specifiers:
 dependencies:
   '@babel/preset-react': 7.25.9
   '@p5-wrapper/react': 4.4.2_nnrd3gsncyragczmpvfhocinkq
+  '@types/node': 22.10.1
   '@types/p5': 1.7.6
   class-variance-authority: 0.7.0
   clsx: 2.1.1
@@ -64,7 +66,7 @@ devDependencies:
   tailwindcss: 3.4.15
   typescript: 5.6.3
   typescript-eslint: 8.15.0_a5kwni2dmitys5t3f7ycin2sie
-  vite: 5.4.11
+  vite: 5.4.11_@types+node@22.10.1
 
 packages:
 
@@ -832,6 +834,11 @@ packages:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
 
+  /@types/node/22.10.1:
+    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
+    dependencies:
+      undici-types: 6.20.0
+
   /@types/p5/1.7.6:
     resolution: {integrity: sha512-6pLTOo0V3N5jZb5nTwjiv3lPHLK3Z/TjbhQUj8CTWXocUk1Z/f6OHTp3Pcwi1BhWnf5gqKUcyEb1gP0KIJuQgw==}
     dev: false
@@ -995,7 +1002,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.25.9_@babel+core@7.26.0
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.11
+      vite: 5.4.11_@types+node@22.10.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2495,6 +2502,9 @@ packages:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: false
 
+  /undici-types/6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
   /universalify/2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
@@ -2529,10 +2539,10 @@ packages:
       front-matter: 4.0.2
       htmlparser2: 6.1.0
       markdown-it: 12.3.2
-      vite: 5.4.11
+      vite: 5.4.11_@types+node@22.10.1
     dev: false
 
-  /vite/5.4.11:
+  /vite/5.4.11_@types+node@22.10.1:
     resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2563,6 +2573,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 22.10.1
       esbuild: 0.21.5
       postcss: 8.4.49
       rollup: 4.27.4
