@@ -164,6 +164,8 @@ function sketch(p5: P5CanvasInstance<FR116SketchProps>) {
 }
 
 export const ArtworkFr121 = () => {
+  const previewWith = window.innerWidth > 800 ? 800 : window.innerWidth;
+
   const [opacity, setOpacity] = useState(0);
   const [debug, setDebug] = useState(false);
   const [goldenLineConfig, setGoldenLineConfig] = useState({
@@ -173,7 +175,7 @@ export const ArtworkFr121 = () => {
     adjustFactorNodeSource: 1,
     nodeVerticalOffset: 40,
     nodeVerticalOffsetFactor: 0.8,
-    lineColorFactor: 1,
+    lineColorFactor: 1.6,
   });
 
   const handleConfigChange = (key: string, value: number) => {
