@@ -3,6 +3,7 @@ import fr121 from "@/assets/fr-116-oil-on-canvas-195x195-cm-2023.jpg";
 
 const things = [
   { title: 'Reproducing "FR-121"', description: 'An exploration of reproducing the iconic artwork "FR-121" with a modern twist.', link: '/fr-121', img: fr121 },
+  { title: 'Learning shaders...', description: 's', link: '/name', img: fr121 },
 ];
 
 export const Things = () => {
